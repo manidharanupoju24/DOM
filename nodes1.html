@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<title>locating nodes</title>
+		<script>
+		function change_color1(){
+			document.childNodes[0].childNodes[1].childNodes[0].style.color="red"; //doesn't work :( I know it sucks.
+			}		
+		function change_color2(){
+			document.getElementsByTagName("h2")[0].style.color="blue";
+		}
+		function change_color3(){
+			document.getElementById("text").style.color="green";
+		}
+		</script>
+</head>
+<body>
+		<h2 style="color:black" id="text">
+			Click on a button below to change the color of the button
+		</h2>
+		<form>
+			<input onclick="change_color1()" type="button" value="change using method 1"> <!-- Method 1 is using the complete path. Tiresome method-->
+			<input onclick="change_color2()" type="button" value="change using method 2"> <!-- Method 2 is using getElementsbyTagName(). A bit better-->
+			<input onclick="change_color3()" type="button" value="change using method 3"> <!-- Mtethod 3 is using getElementById(). This is the simplest method.-->
+		</form>
+</body>
+</html>
