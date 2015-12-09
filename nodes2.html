@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+	<head>
+			<title>Addition of Nodes</title>
+			<script>
+				function add_new_text(){
+				var result = prompt("Enter the text you want");
+				var newText = document.createTextNode(result);
+				document.getElementById("my_text").appendChild(newText);
+			}
+			</script>
+	</head>
+	<body onclick="add_new_text()">
+			<h1>Welcome to the page</h1>
+			<h2>We will now see an alert window, which asks for input</h2>
+			<h3>That input will be dynamically appended after this</h3>
+			<h4 id="my_text"><h4>
+	</body>
+</html>
